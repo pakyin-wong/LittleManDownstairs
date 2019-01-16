@@ -104,23 +104,7 @@ $(document).ready(function() {
                     Crafty("Paddle").each(function(){
                         this.paddlespeed = 0;
                         manObj.antigravity();
-                        Crafty.e('2D, DOM, Mouse').attr({
-                            x: 0,
-                            y: 0,
-                            w: 600,
-                            h: 400
-                          }).bind('Click', function (e) {
-                            console.log("click to restart");
-                            Crafty.scene("game");
-                          });
-                        
-                        Crafty.e("2D, DOM, Text")
-                        .attr({ x: Crafty.viewport.width / 2 - 100, 
-                                y: Crafty.viewport.height / 2 - 20,
-                                w: 200,
-                                h: 20})
-                        .text('Game Over. Click anywhere to restart')
-                        .textAlign("center");
+                        Crafty.scene("gameover");
                     });
                 }
             });
@@ -130,26 +114,16 @@ $(document).ready(function() {
             .attr({ x: 415, y: 20, w: 100, h: 20, points: 0 })
             .text("Passed 0 Paddles");
 
-        //Start Game
-
-
-        Crafty.e("Points, DOM, 2D, Text")
-            .attr({ x: 415, y: 20, w: 100, h: 20, points: 0 })
-            .text("Passed 0 Paddles");
-        
-
 
     });
 
-    Crafty.scene("title", function() {
-        
+    Crafty.scene("title", function() {    
         Crafty.e('2D, DOM, Mouse').attr({
             x: 0,
             y: 0,
             w: 600,
             h: 400
           }).bind('Click', function (e) {
-            console.log("click to start");
             Crafty.scene("game");
           });
         
@@ -159,6 +133,25 @@ $(document).ready(function() {
                 w: 200,
                 h: 20})
         .text('Click anywhere to start game')
+        .textAlign("center");
+    });
+
+    Crafty.scene("gameover", function() {
+        Crafty.e('2D, DOM, Mouse').attr({
+            x: 0,
+            y: 0,
+            w: 600,
+            h: 400
+          }).bind('Click', function (e) {
+            Crafty.scene("game");
+          });
+        
+        Crafty.e("2D, DOM, Text")
+        .attr({ x: Crafty.viewport.width / 2 - 100, 
+                y: Crafty.viewport.height / 2 - 20,
+                w: 200,
+                h: 20})
+        .text('Gameover. Click anywhere to restart game.')
         .textAlign("center");
     });
 
