@@ -6,7 +6,7 @@ $(document).ready(function() {
         //Paddles
         var Paddle1 = Crafty.e("Paddle, 2D, Collision, DOM, Color")
             .color('rgb(255,0,0)')
-            .attr({ x: 250, y: 90, w: 100, h: 10, paddlespeed: 1})
+            .attr({ x: 250, y: 290, w: 100, h: 10, paddlespeed: 1})
             .bind('UpdateFrame', function () {
                 if (this.y <= 0){
                     this.x = Crafty.math.randomInt(50, 449);
@@ -27,7 +27,7 @@ $(document).ready(function() {
         
         var Paddle2 = Crafty.e("Paddle, 2D, Collision, DOM, Color")
             .color('rgb(255,0,0)')
-            .attr({ x: Crafty.math.randomInt(50,450), y: 190, w: 100, h: 10, paddlespeed: 1})
+            .attr({ x: Crafty.math.randomInt(50,450), y: 390, w: 100, h: 10, paddlespeed: 1})
             .bind('UpdateFrame', function () {
                 if (this.y <= 0){
                     this.x = Crafty.math.randomInt(50, 449);
@@ -49,7 +49,7 @@ $(document).ready(function() {
 
         var Paddle3 = Crafty.e("Paddle, 2D, Collision, DOM, Color")
             .color('rgb(255,0,0)')
-            .attr({ x: Crafty.math.randomInt(50,450), y: 290, w: 100, h: 10, paddlespeed: 1})
+            .attr({ x: Crafty.math.randomInt(50,450), y: 490, w: 100, h: 10, paddlespeed: 1})
             .bind('UpdateFrame', function () {
                 if (this.y <= 0){
                     this.x = Crafty.math.randomInt(50, 449);
@@ -71,7 +71,7 @@ $(document).ready(function() {
 
         var Paddle4 = Crafty.e("Paddle, 2D, Collision, DOM, Color")
             .color('rgb(255,0,0)')
-            .attr({ x: Crafty.math.randomInt(50,450), y: 390, w: 100, h: 10, paddlespeed: 1})
+            .attr({ x: Crafty.math.randomInt(50,450), y: 590, w: 100, h: 10, paddlespeed: 1})
             .bind('UpdateFrame', function () {
                 if (this.y <= 0){
                     this.x = Crafty.math.randomInt(50, 449);
